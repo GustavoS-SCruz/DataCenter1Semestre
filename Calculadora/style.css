@@ -1,0 +1,61 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.telaChat {
+	background-color: #5271ff;
+	border-radius: 25px;
+	width: 50%;
+	height: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.mensagemChat {
+	width: 100%;
+	height: 30%;
+	font-size: 35px;
+	margin-top: 40px;
+}
+
+.inputChat {
+	background-color: #260bc8;
+	padding: 10px;
+	font-size: 18px;
+	text-align: center;
+	width: 60%;
+	border-radius: 10px;
+	border: none;
+	color: white;
+}
+
+.inputChat::placeholder {
+	color: white;
+}
+
+.btnChat {
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	font-weight: bold;
+	background-color: #6818a6;
+	margin-top: 20px;
+	min-width: 90px;
+}
+
+.divBtn {
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+}

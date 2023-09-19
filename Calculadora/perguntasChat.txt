@@ -1,0 +1,26 @@
+ola, qual seu nome?
+
+muito prazer fulano!
+em qual empresa voce trabalha?
+
+Uau! Essa empresa é bem grande ne?!
+Mas que tal melhorarmos os processos?
+(dois botao, com sim e nao)
+
+(SE NAO)
+Que pena, fica pra proxima
+(botao ok que renicia)
+
+(SE SIM)
+Ótimo, me fale mais sobre a sua instalação.
+QUantos data center você tem?
+
+QUantas estantes voce tem ao todo?
+
+Quantos racks por estante voces tem
+
+qual o tamanho medio dos racks
+
+aproximadamente quantas laminas(servidores) por rack
+
+qual tamanho da instalação(m²)
