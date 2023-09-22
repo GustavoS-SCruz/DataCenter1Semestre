@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculadora de Custos de Resfriamento por Spray</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="calculadora">
+		<h1>Calculadora de Custos de Resfriamento por Spray</h1>
+		<label for="DatacenterTamanho">Tamanho do Data Center (m²):</label>
+		<input type="number" id="DatacenterTamanho" name="DatacenterTamanho" placeholder="100">
+		<label for="ResfriamentoCapacidade">Capacidade de Resfriamento Necessária (kW):</label>
+		<input type="number" id="ResfriamentoCapacidade" name="ResfriamentoCapacidade" placeholder="50">
+		<label for="Eletricidade">Preço da Eletricidade (R$/kWh):</label>
+		<input type="number" id="Eletricidade" name="Eletricidade" placeholder="0.50">
+		<label for="custoI">Custo Inicial do Sistema de Resfriamento por Spray (R$):</label>
+		<input type="number" id="custoI" name="custoI" placeholder="50000">
+		<label for="custoOperacionalMensal">Custos Operacionais Mensais (R$):</label>
+		<input type="number" id="custoOperacionalMensal" name="custoOperacionalMensal" placeholder="2000">
+		<button onclick="calcularCustos()">Calcular</button>
+		<div id="resultados">
+			<p>Economia Mensal de Energia: <span id="economiaMensalEnergia">0</span> R$</p>
+			<p>ROI Estimado: <span id="roi">0</span> meses</p>
+		</div>
+	</div>
+</body>
+
+</html>
+
+
+<script>
+	function calcularCustos()
+	{
+		// Obtém os valores inseridos pelo usuário diretamente pelos IDs dos elementos
+		var tamanhoDatacenter = Number(DatacenterTamanho.value);
+		var capacidadeResfriamento = Number(ResfriamentoCapacidade.value);
+		var precoEletricidade = Number(Eletricidade.value);
+		var custoInicial = Number(custoI.value);
+		var custoOperacionalMensal = Number(custoOperacionalMensal.value);
+
+		// Realiza os cálculos com base nos valores inseridos
+		var economiaMensalEnergia = (capacidadeResfriamento * 720 * (1 - 0.5) * precoEletricidade).toFixed(2); // Estimativa de economia mensal de energia em R$
+		var roi = (custoInicial / economiaMensalEnergia).toFixed(2); // Estimativa de ROI em meses
+
+		// Atualiza os elementos HTML com os resultados calculados usando innerHTML
+		economiaMensalEnergiaSpan.innerHTML = economiaMensalEnergia + " R$";
+		roiSpan.innerHTML = roi + " meses";
+	}
+</script>
